@@ -1,0 +1,257 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+#--------------------------------------------------------------#
+# 配置Alacritty，GPU增强型终端仿真器。
+
+# Import additional configuration files
+#--------------------------------------------------------------#
+#导入额外的配置文件
+# Imports are loaded in order, skipping all missing files, with the importing
+#--------------------------------------------------------------#
+# 在导入时，会按顺序加载，跳过所有丢失的文件
+# file being loaded last. If a field is already present in a previous import, it
+# will be replaced.
+#--------------------------------------------------------------#
+# 最后加载的文件。如果一个字段已经存在于以前的导入中，它将被替换。
+# All imports must either be absolute paths starting with `/`, or paths relative
+# to the user's home directory starting with `~/`.
+#--------------------------------------------------------------#
+# 所有导入必须是以`/`开头的绝对路径，或者是相对路径以 `~/` 开头的用户主目录。
+#import:
+#  - /path/to/alacritty.yml
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+#--------------------------------------------------------------#
+# 任何的主题都在这个'env'里 他们将会被添加进环境变量
+# 某些配置可能会被覆盖 这由alacritty决定
+# npm install -g alacritty-themes
+# Dracula
+
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  #--------------------------------------------------------------#
+  # 该配置将用于设置 `$TERM` 环境变量 每个 Alacritty 实例。
+  # 如果它未被设置，alacritty将检查本地 terminfo 数据库，如果`alacritty`可用，就使用它
+  # 否则就使用 `xterm-256color`。
+  TERM: xterm-256color
+
+background_opacity: 0.8
+window:
+  # Window dimensions (changes require restart)->尺寸
+  #
+  # Number of lines/columns (not pixels) in the terminal. The number of columns
+  # must be at least `2`, while using a value of `0` for columns and lines will
+  # fall back to the window manager's recommended size.
+  #--------------------------------------------------------------#
+  # 终端中的行数/列数（不是像素）。
+  # 列数必须至少为 `2`
+  # 而对列和行使用 `0` 的值将回退到窗口管理器的推荐大小。
+  dimensions:
+    columns: 60
+    lines: 25
+    # Window position (changes require restart)->位置
+    #
+    # Specified in number of pixels.
+    # If the position is not set, the window manager will handle the placement.
+    #position:
+    #--------------------------------------------------------------#
+    # 以像素数指定。
+    # 如果未设置位置，窗口管理器将处理放置。
+    #  x: 0
+    #  y: 0
+    # Window padding (changes require restart)->填充  
+    #
+    # Blank space added around the window in pixels. This padding is scaled
+    # by DPI and the specified value is always added at both opposing sides.
+    #--------------------------------------------------------------#
+    # 在窗口周围添加的空白区域（以像素为单位）。
+    # 此填充已缩放通过 DPI 并且指定的值总是在相对的两边相加。
+    #padding:
+    #  x: 0
+    #  y: 0
+    # Spread additional padding evenly around the terminal content.
+    # 在终端内容周围均匀分布额外的填充。
+    #dynamic_padding: false
+    # Window decorations->装饰
+    #
+    # Values for `decorations`:
+    #     - full: Borders and title bar
+    #     - none: Neither borders nor title bar
+    #
+    # Values for `decorations` (macOS only):
+    #     - transparent: Title bar, transparent background and title bar buttons
+    #     - buttonless: Title bar, transparent background and no title bar buttons
+    #decorations: full
+    # Background opacity
+    # 背景不透明度
+    #
+    # Window opacity as a floating point number from `0.0` to `1.0`.
+    # The value `0.0` is completely transparent and `1.0` is opaque.
+    # 窗口不透明度为浮点数，从 `0.0` 到 `1.0`。
+    # 值`0.0`是完全透明的，`1.0`是不透明的。
+    # opacity: 0.5
+    #
+    # Startup Mode (changes require restart)
+    # 启动模式（更改需要重启）窗口化、最大化、全屏
+    #
+    # Values for `startup_mode`:
+    # 
+    #   - Windowed
+    #   - Maximized
+    #   - Fullscreen
+    #
+    # Values for `startup_mode` (macOS only):
+    #   - SimpleFullscreen
+    #startup_mode: Windowed
+    # Window title->窗口标题
+    #title: Alacritty
+    # Allow terminal applications to change Alacritty's window title.
+    # 允许终端应用程序更改 Alacritty 的窗口标题。
+    #dynamic_title: true
+    # Window class (Linux/BSD only):->窗口类
+    #class:
+    # Application instance name->应用实例名称
+    #instance: Alacritty
+    # General application class->通用应用类
+    #general: Alacritty
+
+  # GTK theme variant (Linux/BSD only)->GTK 主题变体
+  #
+  # Override the variant of the GTK theme. Commonly supported values are `dark`
+  # and `light`. Set this to `None` to use the default theme variant.
+  # 覆盖 GTK 主题的变体。
+  # 通常支持的值是 `dark`和`light`。将此设置为“None”以使用默认主题变体。
+  gtk_theme_variant: dark
+  #scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  # 回滚缓冲区中的最大行数。
+  # 指定 '0' 将禁用滚动。
+  #history: 10000
+  # Scrolling distance multiplier.
+  # 滚动距离乘数
+  #multiplier: 3
+
+# Font configuration
+# 自体配置
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: monaco
+
+    # The `style` can be specified to pick a specific face.
+    # `style`可以用来制定一个特别样式的字体
+    style: Regular
+
+  # Bold font face->粗面字体
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    # 如果不指定粗体系列，则回退到为普通字体指定的值。
+    # monospace->等宽
+    family: monaco
+
+    # The `style` can be specified to pick a specific face.
+    # Bold->粗体
+    style: Bold
+
+  # Italic font face->斜体字体
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: monaco
+
+    # The `style` can be specified to pick a specific face.
+    # Italic->斜体
+    style: Italic
+
+  # Bold italic font face
+  # 粗斜体字体
+  bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: monaco
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold Italic
+
+  # Point size->点的大小
+  size: 17
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  # 偏移量是每个字符周围的额外空间。
+  # 'offset.y'可以认为 是修改行距
+  # 'offset.x'可以认为 是修改字母间距
+  #offset:
+  #  x: 0
+  #  y: 0
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  # 字形偏移确定字形在其单元格内的位置默认在底部。
+  # `x` :向又移动
+  # `y` :向上移动。
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+  # Thin stroke font rendering (macOS only)
+  # 细笔画字体渲染（仅限 macOS）
+  #
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`.
+  # 细笔画适用于视网膜显示器，
+  # 非视网膜屏幕使用时建议将 `use_thin_strokes` 设置为 `false`。
+  use_thin_strokes: true
+
+# If `true`, bold text is drawn using the bright color variants.
+# 如果为 `true`，则使用亮色变体绘制粗体文本。
+draw_bold_text_with_bright_colors: true
+
+# Colors (Tomorrow Night)
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
+theme: Dracula
