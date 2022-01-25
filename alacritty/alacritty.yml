@@ -148,7 +148,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: monaco
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     # `style`可以用来制定一个特别样式的字体
@@ -162,7 +162,7 @@ font:
     # value specified for the normal font.
     # 如果不指定粗体系列，则回退到为普通字体指定的值。
     # monospace->等宽
-    family: monaco
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     # Bold->粗体
@@ -174,7 +174,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: monaco
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     # Italic->斜体
@@ -187,13 +187,13 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: monaco
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size->点的大小
-  size: 17
+  size: 19
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
