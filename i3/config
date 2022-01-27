@@ -34,9 +34,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec_always zsh ~/文档/xmodmap.sh
+exec --no-startup-id variety
+
+exec_always xmodmap ~/.xmodmap
 exec_always compton
-exec_always variety
 exec_always fcitx
 #exec_always mate-power-manager
 
@@ -209,11 +210,12 @@ bar {
 	position top
 	mode dock
         status_command i3status
-	status_command /home/zeke/.config/i3status/i3status/contrib/net-speed.sh
 
+#	status_command /home/zeke/.config/i3status/i3status/contrib/net-speed.sh
+	status_command /home/zeke/.config/i3status/net-speed.sh
 }
 
 # jetbrain-IDE
 #for_window [class="^jetbrains-.+"][window_type=dialog] focus
-for_window [class="Setting"] floating enable resize set 640 480,move right 330px,move down 70px
+#for_window [class="Setting"] floating enable resize set 640 480,move right 330px,move down 70px
 

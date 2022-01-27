@@ -30,7 +30,6 @@ order += "cpu_temperature 0"
 #order += "load"
 order += "memory"
 order += "battery all"
-order += "volume master"
 order += "tztime local"
 
 
@@ -57,7 +56,7 @@ general {
 	output_format = i3bar
 }
 
-wireless wlp1s0 {
+wireless wlp4s0 {
 format_up ="%quality📶%essid %frequency|%ip"
      #format_up = "%quality  %essid %ip (%speed)"
 #     	format_down = ""
@@ -80,32 +79,22 @@ memory {
 }
 
 battery all {
-	path = "/sys/class/power_supply/CMB%d/uevent"
 # format = "%status %percentage %remaining %emptytime"
 	format = " %status %percentage "
 		format_down = "No battery"
 		last_full_capacity = true
 		integer_battery_capacity = true
-		#status_chr = "🔌"
+# status_chr = ""
 		status_chr = "⚡"
 # status_bat = "bat"
 #status_bat = "☉"
-		status_bat = "🔋"
+		status_bat = ""
 # status_unk = "?"
-		status_unk = "?"
+		status_unk = ""
 # status_full = ""
-		status_full = "✨"
+		status_full = "☻"
 		low_threshold = 15
 		threshold_type = time
-}
-
-
-volume master {
-  format = "🔊%volume"
-  format_muted = "🔇%volume"
-  device = "default"
-  mixer = "Master"
-  mixer_idx = 0
 }
 
 tztime local {
