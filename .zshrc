@@ -8,8 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="dpoggi"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="dpoggi"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -100,33 +100,42 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/zeke/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/zeke/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/zeke/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/zeke/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 alias i3c="vim ~/.config/i3/config"
 alias zshcc="source ~/.zshrc"
 alias zshc="vim ~/.zshrc"
 alias ra="ranger"
 alias neo="neofetch"
-alias dt2="conda activate dt2"
+alias fcn='conda activate fcn'
+
+alias China='sudo pacman-mirrors --country China'
 
 alias onc='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
 alias offc='unset https_proxy http_proxy all_proxy'
+
+alias gpu='nvidia-smi'
+alias gpu1='watch -n 1 nvidia-smi'
+
+alias cip='curl cip.cc'
 
 export PATH=/opt/cuda/bin:$PATH
 
 
 
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/zeke/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/zeke/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/zeke/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/zeke/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

@@ -39,8 +39,7 @@ env:
   # 如果它未被设置，alacritty将检查本地 terminfo 数据库，如果`alacritty`可用，就使用它
   # 否则就使用 `xterm-256color`。
   TERM: xterm-256color
-
-background_opacity: 0.8
+window.opacity: 0.8
 window:
   # Window dimensions (changes require restart)->尺寸
   #
@@ -52,8 +51,8 @@ window:
   # 列数必须至少为 `2`
   # 而对列和行使用 `0` 的值将回退到窗口管理器的推荐大小。
   dimensions:
-    columns: 60
-    lines: 25
+    columns: 75
+    lines: 26
     # Window position (changes require restart)->位置
     #
     # Specified in number of pixels.
