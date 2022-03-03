@@ -1,5 +1,4 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
-#--------------------------------------------------------------#
+# Configuration for Alacritty, the GPU enhanced terminal emulator.  #--------------------------------------------------------------#
 # 配置Alacritty，GPU增强型终端仿真器。
 
 # Import additional configuration files
@@ -39,8 +38,12 @@ env:
   # 如果它未被设置，alacritty将检查本地 terminfo 数据库，如果`alacritty`可用，就使用它
   # 否则就使用 `xterm-256color`。
   TERM: xterm-256color
-window.opacity: 0.8
+    #background_opacity: 0.8
+    #
+
+
 window:
+  #window.opacity: 0.8
   # Window dimensions (changes require restart)->尺寸
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -50,6 +53,7 @@ window:
   # 终端中的行数/列数（不是像素）。
   # 列数必须至少为 `2`
   # 而对列和行使用 `0` 的值将回退到窗口管理器的推荐大小。
+  opacity: 0.8
   dimensions:
     columns: 75
     lines: 26
@@ -192,7 +196,7 @@ font:
     style: Bold Italic
 
   # Point size->点的大小
-  size: 19
+  size: 16.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -219,7 +223,7 @@ font:
   # it is recommended to set `use_thin_strokes` to `false`.
   # 细笔画适用于视网膜显示器，
   # 非视网膜屏幕使用时建议将 `use_thin_strokes` 设置为 `false`。
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
 # 如果为 `true`，则使用亮色变体绘制粗体文本。
