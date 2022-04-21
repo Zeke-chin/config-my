@@ -70,7 +70,19 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+#
+#
+#https://api.mtr.pub/zsh-users/zsh-syntax-highlighting.git
+#https://api.mtr.pub/zsh-users/zsh-autosuggestions.git
+#
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# git clone https://github.com/zsh-users/zsh-autosuggestions           ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting	
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,3 +151,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+source ~/powerlevel10k/powerlevel10k.zsh-theme
